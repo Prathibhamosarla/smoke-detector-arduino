@@ -9,10 +9,10 @@ void loop() {
   int sensorValue = analogRead(A0);
   Serial.println(sensorValue);
   if (sensorValue > 800) {
-    analogWrite(BUZZER_PIN, 50);
+    digitalWrite(BUZZER_PIN,HIGH);
     Serial.println("GAS DETECTED");
   } else {
-    analogWrite(BUZZER_PIN, 0);
+    ditigalWrite(BUZZER_PIN,LOW);
   }
   delay(1000);
 }
